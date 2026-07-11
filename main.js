@@ -236,6 +236,31 @@
     }
   });
 
+
+  /* Rotating personas: for the ones in motion */
+  const rotator = document.getElementById("whorotator");
+  if (rotator) {
+    const who = [
+      "the parent at 6am.",
+      "the founder between meetings.",
+      "the creator on deadline.",
+      "the student before class.",
+      "the commuter at golden hour.",
+      "you, mid-flow."
+    ];
+    let wi = 0;
+    if (!reduceMotion) {
+      setInterval(() => {
+        wi = (wi + 1) % who.length;
+        const s = rotator.querySelector("span");
+        s.classList.remove("in");
+        void s.offsetWidth;
+        s.textContent = who[wi];
+        s.classList.add("in");
+      }, 2600);
+    }
+  }
+
   /* ─────── 8. Water & flow ─────── */
 
   /* Buttery scrolling */
