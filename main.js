@@ -235,4 +235,56 @@
       alert("Something interrupted the flow — please try again.");
     }
   });
+
+  /* ─────── 8. Water & flow ─────── */
+
+  /* Buttery scrolling */
+  if (window.Lenis && !reduceMotion) {
+    const lenis = new Lenis({ lerp: 0.09 });
+    function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", e => {
+        const target = document.querySelector(a.getAttribute("href"));
+        if (target) { e.preventDefault(); lenis.scrollTo(target, { offset: -60, duration: 1.4 }); }
+      });
+    });
+  }
+
+  /* Drifting petals in the hero */
+  const petalBox = document.getElementById("petals");
+  if (petalBox && !reduceMotion) {
+    const COUNT = 9;
+    for (let i = 0; i < COUNT; i++) {
+      const p = document.createElement("span");
+      p.className = "petal";
+      p.style.setProperty("--x", (4 + Math.random() * 92) + "%");
+      p.style.setProperty("--size", (9 + Math.random() * 15) + "px");
+      p.style.setProperty("--sway", (30 + Math.random() * 70) + "px");
+      p.style.setProperty("--dur", (11 + Math.random() * 12) + "s");
+      p.style.setProperty("--delay", (-Math.random() * 20) + "s");
+      p.style.setProperty("--op", (0.35 + Math.random() * 0.35).toFixed(2));
+      petalBox.appendChild(p);
+    }
+    new IntersectionObserver(es => {
+      es.forEach(e => {
+        petalBox.style.display = e.isIntersecting ? "" : "none";
+      });
+    }).observe(petalBox.parentElement);
+  }
+
+  /* Water ripples on click */
+  if (!reduceMotion) {
+    document.addEventListener("pointerdown", e => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      for (const cls of ["ripple", "ripple ripple--late"]) {
+        const r = document.createElement("span");
+        r.className = cls;
+        r.style.left = e.clientX + "px";
+        r.style.top = e.clientY + "px";
+        document.body.appendChild(r);
+        setTimeout(() => r.remove(), 1500);
+      }
+    }, { passive: true });
+  }
 })();

@@ -264,6 +264,75 @@ body.has-banner .mobilemenu { padding-top: var(--banner-h); }
   .topbanner__sep { display: none; }
 }
 
+/* ─────────── Water & flow ─────────── */
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+.petals {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+.petal {
+  position: absolute;
+  top: -6vh;
+  left: var(--x);
+  width: var(--size);
+  height: calc(var(--size) * 0.82);
+  background: radial-gradient(120% 120% at 30% 25%, rgba(222, 165, 116, var(--op)), rgba(164, 111, 77, calc(var(--op) * 0.75)) 70%);
+  border-radius: 72% 28% 62% 38% / 55% 68% 32% 45%;
+  animation: petalfall var(--dur) linear var(--delay) infinite;
+  will-change: transform;
+}
+@keyframes petalfall {
+  0%   { transform: translate3d(0, -6vh, 0) rotate(0deg); }
+  25%  { transform: translate3d(calc(var(--sway) * 0.6), 22vh, 0) rotate(95deg); }
+  50%  { transform: translate3d(calc(var(--sway) * -0.4), 48vh, 0) rotate(180deg); }
+  75%  { transform: translate3d(calc(var(--sway) * 0.8), 76vh, 0) rotate(265deg); }
+  100% { transform: translate3d(calc(var(--sway) * -0.2), 108vh, 0) rotate(360deg); }
+}
+
+.ripple {
+  position: fixed;
+  z-index: 90;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(185, 137, 85, 0.6);
+  pointer-events: none;
+  animation: rippleout 0.9s cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+}
+.ripple--late {
+  animation-duration: 1.25s;
+  animation-delay: 0.12s;
+  border-color: rgba(164, 111, 77, 0.4);
+  opacity: 0;
+}
+@keyframes rippleout {
+  0%   { transform: scale(0.4); opacity: 0.9; }
+  100% { transform: scale(9); opacity: 0; }
+}
+
+.manifesto__flowline { overflow: hidden; }
+.manifesto__flowline.is-in svg {
+  width: 114%;
+  margin-left: -7%;
+  animation: current 7s ease-in-out 2.4s infinite alternate;
+}
+@keyframes current {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-3.5%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal, .ripple { display: none; }
+  .manifesto__flowline.is-in svg { animation: none; }
+}
+
 /* ─────────── Nav ─────────── */
 
 .nav {
