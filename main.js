@@ -39,6 +39,20 @@
     setTimeout(() => { if (document.getElementById("loader")) unveil(); }, 6000);
   }
 
+
+  /* Announcement banner */
+  const banner = document.getElementById("topbanner");
+  const bannerClose = document.getElementById("bannerclose");
+  if (banner && bannerClose) {
+    bannerClose.addEventListener("click", () => {
+      banner.style.transition = "transform 0.5s cubic-bezier(0.65,0,0.35,1), opacity 0.4s";
+      banner.style.transform = "translateY(-100%)";
+      banner.style.opacity = "0";
+      body.classList.remove("has-banner");
+      setTimeout(() => banner.remove(), 500);
+    });
+  }
+
   /* ─────── 2. Nav state ─────── */
   let lastY = 0;
   window.addEventListener("scroll", () => {

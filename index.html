@@ -7,7 +7,8 @@
 <meta name="description" content="Qulana is a new beauty house built on one idea: beauty isn't something you chase. It's something you uncover when life flows. Affordable luxury for the everyday ritual. Launching soon.">
 <meta property="og:title" content="Qulana — Beauty in Every Flow">
 <meta property="og:description" content="A new beauty house built on flow. Affordable luxury for the everyday ritual. Launching soon.">
-<meta property="og:image" content="assets/hero.webp">
+<meta property="og:image" content="https://qulana.vercel.app/assets/hero.webp">
+<meta property="og:url" content="https://qulana.vercel.app">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="has-banner">
 
 <!-- ══════════ UNVEILING ══════════ -->
 <div class="loader" id="loader" aria-hidden="true">
@@ -33,6 +34,13 @@
 <!-- Continuous flow line — one line connects everything, just like the logo -->
 <svg class="flowthread" id="flowthread" aria-hidden="true" preserveAspectRatio="none"></svg>
 
+<!-- ══════════ ANNOUNCEMENT ══════════ -->
+<div class="topbanner" id="topbanner" role="region" aria-label="Launch newsletter">
+  <p><strong>Launch exclusive</strong><span class="topbanner__sep">·</span>Be first in line for Qulana. Join the newsletter for founding-member updates.</p>
+  <a href="#waitlist" class="topbanner__cta">Join now</a>
+  <button class="topbanner__close" id="bannerclose" aria-label="Dismiss announcement">&times;</button>
+</div>
+
 <!-- ══════════ NAV ══════════ -->
 <header class="nav" id="nav">
   <a href="#top" class="nav__logo" aria-label="Qulana home">
@@ -43,6 +51,7 @@
   <nav class="nav__links" aria-label="Primary">
     <a href="#philosophy">Philosophy</a>
     <a href="#framework">The Framework</a>
+    <a href="#founder">Founder</a>
     <a href="#partners">Partners</a>
   </nav>
   <a href="#waitlist" class="nav__cta">Join the waitlist</a>
@@ -56,6 +65,7 @@
   <nav aria-label="Mobile">
     <a href="#philosophy">Philosophy</a>
     <a href="#framework">The Framework</a>
+    <a href="#founder">Founder</a>
     <a href="#partners">Partners</a>
     <a href="#waitlist" class="mobilemenu__cta">Join the waitlist</a>
   </nav>
@@ -67,7 +77,6 @@
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__text">
-      <p class="hero__eyebrow reveal"><span class="dot"></span>A new beauty house · Launching soon</p>
       <h1 class="hero__title">
         <span class="hero__line"><span>Beauty</span></span>
         <span class="hero__line"><span>in <em>Every</em></span></span>
@@ -92,12 +101,6 @@
           <path d="M836.85,849.50 C828.60,847.94 822.81,845.90 810.83,840.32 L803.15,836.76 L800.14,838.90 C794.92,842.61 784.59,846.98 777.41,848.50 C757.05,852.81 735.23,847.11 721.44,833.86 C713.38,826.13 709.50,820.12 705.95,809.87 C700.24,793.35 701.29,777.29 709.18,761.00 C712.41,754.32 714.92,750.90 720.90,745.00 C734.15,731.92 749.46,726.33 769.48,727.24 C787.45,728.06 801.23,733.86 812.06,745.16 C817.56,750.90 824.29,763.83 825.92,771.80 C827.47,779.41 827.25,794.59 825.48,801.54 C823.49,809.38 818.01,820.47 813.57,825.66 C811.60,827.95 810.00,830.24 810.00,830.76 C810.00,832.23 826.66,839.62 836.07,842.33 C852.10,846.96 864.43,846.66 873.88,841.43 C878.94,838.62 880.00,838.45 880.00,840.45 C880.00,842.53 874.32,846.51 868.50,848.52 C861.75,850.85 846.49,851.32 836.85,849.50 Z M776.20,843.88 C782.36,842.58 792.41,838.20 795.96,835.27 L798.42,833.24 L792.25,830.13 C779.65,823.77 771.54,821.65 759.50,821.57 C750.04,821.51 747.80,821.82 743.51,823.80 C740.77,825.06 737.50,827.06 736.25,828.24 C734.54,829.84 733.69,830.09 732.83,829.23 C731.39,827.79 736.87,822.40 742.00,820.21 C757.60,813.57 774.42,814.79 795.43,824.09 C800.34,826.27 804.64,827.70 805.00,827.27 C815.54,814.65 820.00,802.42 820.00,786.18 C820.00,769.81 815.08,756.87 805.14,747.06 C798.25,740.25 791.57,736.58 781.41,733.98 C762.28,729.08 742.32,733.74 728.47,746.34 C721.77,752.43 716.98,759.78 713.19,769.76 C710.93,775.69 710.62,778.06 710.56,789.50 C710.51,800.59 710.84,803.48 712.81,809.19 C720.49,831.41 739.17,844.66 763.20,844.92 C767.44,844.96 773.29,844.50 776.20,843.88 Z" fill="currentColor"/>
         </svg>
       </div>
-    </div>
-  </div>
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>Skincare</span><i>✦</i><span>Body</span><i>✦</i><span>Hair</span><i>✦</i><span>Fragrance</span><i>✦</i><span>Home</span><i>✦</i><span>Wellness</span><i>✦</i><span>Community</span><i>✦</i>
-      <span>Skincare</span><i>✦</i><span>Body</span><i>✦</i><span>Hair</span><i>✦</i><span>Fragrance</span><i>✦</i><span>Home</span><i>✦</i><span>Wellness</span><i>✦</i><span>Community</span><i>✦</i>
     </div>
   </div>
 </section>
@@ -160,13 +163,33 @@
   </div>
 </section>
 
+<!-- ══════════ FOUNDER ══════════ -->
+<section class="founder" id="founder">
+  <div class="founder__inner">
+    <div class="founder__text">
+      <p class="section-eyebrow reveal">04 — A note from our founder</p>
+      <h2 class="founder__title reveal-lines">Flow found <em>me</em> first.</h2>
+      <div class="founder__letter">
+        <p class="reveal">I built Qulana after years of living against the current — always building, always moving, always optimizing. The moments that made me feel most beautiful were never the loud ones. They were the quiet ones: water on skin at sunrise, a breath between meetings, the small ritual before sleep.</p>
+        <p class="reveal">Qulana is my invitation to you. Stop chasing beauty. Uncover it — in the life you already have.</p>
+      </div>
+      <p class="founder__sig reveal">Kulana</p>
+      <p class="founder__role reveal">Founder &amp; CEO</p>
+    </div>
+    <div class="founder__media reveal" data-parallax="0.05">
+      <img src="assets/founder.webp" alt="Kulana, Founder and CEO of Qulana" loading="lazy">
+      <figcaption>Kulana · Founder &amp; CEO</figcaption>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════ BELIEF ══════════ -->
 <section class="belief">
   <div class="belief__media" data-parallax="0.08">
     <img src="assets/orchid.webp" alt="A woman's face framed by pink orchids" loading="lazy">
   </div>
   <div class="belief__text">
-    <p class="section-eyebrow reveal">04 — Our belief</p>
+    <p class="section-eyebrow reveal">05 — Our belief</p>
     <h2 class="belief__title reveal-lines">Beauty doesn't begin in the mirror. It begins with <em>how we live.</em></h2>
     <div class="belief__hows reveal">
       <span>How we wake</span>
@@ -182,7 +205,7 @@
 <!-- ══════════ FRAMEWORK ══════════ -->
 <section class="framework" id="framework">
   <div class="framework__head">
-    <p class="section-eyebrow light reveal">05 — The Flow Framework</p>
+    <p class="section-eyebrow light reveal">06 — The Flow Framework</p>
     <h2 class="framework__title reveal-lines">Every day already contains moments of flow. <em>Qulana elevates them.</em></h2>
   </div>
   <ul class="framework__list" id="flowlist">
@@ -245,7 +268,7 @@
 
 <!-- ══════════ POSITION ══════════ -->
 <section class="position">
-  <p class="section-eyebrow reveal">06 — Our position</p>
+  <p class="section-eyebrow reveal">07 — Our position</p>
   <h2 class="position__title reveal-lines">Luxury isn't a price point. <em>It's a feeling.</em></h2>
   <div class="position__pillars">
     <div class="pillar reveal"><span>①</span><h3>Premium quality</h3><p>Formulas held to the standard of houses ten times the price.</p></div>
@@ -262,11 +285,11 @@
 <section class="partners" id="partners">
   <div class="partners__inner">
     <div class="partners__text">
-      <p class="section-eyebrow light reveal">07 — Build with us</p>
+      <p class="section-eyebrow light reveal">08 — Build with us</p>
       <h2 class="reveal-lines">The brand is ready. The shelf comes <em>next.</em></h2>
       <p class="partners__lead reveal">Qulana is a private-label beauty house preparing its first collection. We're opening conversations with the people who will help bring it to the world.</p>
       <ul class="partners__roles">
-        <li class="reveal"><strong>OEM & formulation partners</strong><span>Co-develop Series 01 with a brand platform that's already defined.</span></li>
+        <li class="reveal"><strong>OEM & formulation partners</strong><span>Co-develop the first collection with a brand platform that's already defined.</span></li>
         <li class="reveal"><strong>Retailers & distributors</strong><span>A differentiated affordable-luxury story for your beauty wall.</span></li>
         <li class="reveal"><strong>Investors</strong><span>A category position built for the next decade of beauty.</span></li>
         <li class="reveal"><strong>Creators & collaborators</strong><span>Help shape the rituals, the drops and the community.</span></li>
@@ -283,12 +306,12 @@
 <!-- ══════════ WAITLIST ══════════ -->
 <section class="waitlist" id="waitlist">
   <div class="waitlist__inner">
-    <p class="section-eyebrow reveal">08 — Before the world knows</p>
+    <p class="section-eyebrow reveal">09 — Before the world knows</p>
     <h2 class="waitlist__title">
       <span class="mline dark">Find your</span>
       <span class="mline dark"><em>flow</em> first.</span>
     </h2>
-    <p class="waitlist__sub reveal">Join the list for first access to Series 01, founding-member pricing and the story as it unfolds. No noise. Only flow.</p>
+    <p class="waitlist__sub reveal">Join the list for first access to the first collection, founding-member pricing and the story as it unfolds. No noise. Only flow.</p>
     <form class="waitlist__form reveal" id="waitform" method="POST" action="https://formspree.io/f/FORMSPREE_ID">
       <div class="waitlist__field">
         <input type="email" name="email" id="email" required placeholder=" " autocomplete="email">
@@ -319,6 +342,7 @@
       <h4>Explore</h4>
       <a href="#philosophy">Philosophy</a>
       <a href="#framework">The Framework</a>
+      <a href="#founder">Founder</a>
       </div>
     <div class="footer__col">
       <h4>Connect</h4>
