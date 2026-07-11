@@ -638,7 +638,7 @@ body.is-revealed .hero__line > span { transform: none; }
   background:
     radial-gradient(70rem 50rem at -10% 20%, rgba(217, 210, 200, 0.5), transparent 55%),
     var(--flow-white);
-  padding: clamp(90px, 13vh, 160px) clamp(20px, 4.5vw, 64px);
+  padding: clamp(90px, 13vh, 160px) clamp(20px, 4.5vw, 64px) 0;
 }
 .story__inner { max-width: 900px; margin: 0 auto; }
 .story__narrative { display: flex; flex-direction: column; gap: clamp(26px, 4vh, 40px); }
