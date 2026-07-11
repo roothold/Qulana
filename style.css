@@ -488,6 +488,7 @@ body.is-revealed .hero__line > span { transform: none; }
 .hero__line:nth-child(2) > span { transition-delay: 0.1s; }
 .hero__line:nth-child(3) > span { transition-delay: 0.2s; }
 .hero__flow { font-style: italic; font-weight: 320; }
+.hero__flow em { color: var(--midnight); }
 .hero__sub {
   max-width: 44ch;
   margin-top: clamp(22px, 3.4vh, 38px);
