@@ -284,7 +284,7 @@
       const p = document.createElement("span");
       p.className = "petal";
       p.style.setProperty("--x", (4 + Math.random() * 92) + "%");
-      p.style.setProperty("--size", (9 + Math.random() * 15) + "px");
+      p.style.setProperty("--size", (18 + Math.random() * 30) + "px");
       p.style.setProperty("--sway", (30 + Math.random() * 70) + "px");
       p.style.setProperty("--dur", (11 + Math.random() * 12) + "s");
       p.style.setProperty("--delay", (-Math.random() * 20) + "s");
