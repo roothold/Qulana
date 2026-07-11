@@ -210,7 +210,7 @@
     if (action.includes("FORMSPREE_ID")) {
       // Form backend not configured yet — fall back to a pre-filled email.
       window.location.href =
-        "mailto:michael@surpluspods.com?subject=Qulana%20Waitlist&body=Please%20add%20me%20to%20the%20Qulana%20waitlist:%20" +
+        "mailto:contact@qulanabeauty.com?subject=Qulana%20Waitlist&body=Please%20add%20me%20to%20the%20Qulana%20waitlist:%20" +
         encodeURIComponent(email);
       return;
     }
