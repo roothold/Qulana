@@ -248,16 +248,16 @@ em { font-style: italic; }
 .topbanner__sep { margin: 0 10px; opacity: 0.6; }
 .topbanner__cta {
   flex-shrink: 0;
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  padding: 6px 16px;
-  border-radius: 999px;
-  background: var(--flow-white);
-  color: var(--terracotta);
-  transition: transform 0.4s var(--ease-flow), background 0.3s;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 2px 0;
+  color: var(--flow-white);
+  border-bottom: 1px solid rgba(248, 246, 241, 0.55);
+  transition: color 0.3s, border-color 0.3s;
 }
-.topbanner__cta:hover { transform: translateY(-2px); background: var(--midnight); color: var(--flow-white); }
+.topbanner__cta:hover { color: var(--sand); border-color: var(--sand); }
 .topbanner__close {
   position: absolute;
   right: 14px;
@@ -394,16 +394,16 @@ html.lenis, html.lenis body { height: auto; }
 }
 .nav__links a:hover::after { transform: scaleX(1); transform-origin: left; }
 .nav__cta {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  padding: 12px 24px;
-  border-radius: 999px;
-  background: var(--midnight);
-  color: var(--flow-white);
-  transition: background 0.35s, transform 0.45s var(--ease-flow);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 6px 2px;
+  color: var(--midnight);
+  border-bottom: 1.5px solid rgba(35, 35, 35, 0.35);
+  transition: color 0.35s, border-color 0.35s;
 }
-.nav__cta:hover { background: var(--terracotta); transform: translateY(-2px); }
+.nav__cta:hover { color: var(--terracotta); border-color: var(--terracotta); }
 
 .nav__burger {
   display: none;
@@ -588,7 +588,7 @@ body.is-revealed .hero__line > span { transform: none; }
 .definition__card {
   background: #fff;
   border: 1px solid rgba(35, 35, 35, 0.08);
-  border-radius: 28px;
+  border-radius: 6px;
   padding: clamp(36px, 4.5vw, 64px);
   box-shadow: 0 30px 70px -45px rgba(61, 75, 65, 0.4);
   position: relative;
@@ -618,7 +618,7 @@ body.is-revealed .hero__line > span { transform: none; }
   line-height: 1.45;
 }
 .definition__is em { color: var(--terracotta); }
-.definition__media { position: relative; border-radius: 28px; overflow: hidden; }
+.definition__media { position: relative; border-radius: 6px; overflow: hidden; }
 .definition__media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3.4; }
 .definition__media figcaption {
   position: absolute;
@@ -662,13 +662,14 @@ body.is-revealed .hero__line > span { transform: none; }
 .motion {
   position: relative;
   margin-top: clamp(48px, 8vh, 80px);
-  border-radius: 28px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   overflow: hidden;
-  min-height: clamp(380px, 52vh, 540px);
+  min-height: clamp(420px, 62vh, 640px);
   display: flex;
   align-items: flex-end;
-  box-shadow: 0 40px 90px -45px rgba(35, 35, 35, 0.5);
 }
+.motion__content { padding-left: clamp(20px, 8vw, 120px) !important; }
 .motion__bg { position: absolute; inset: 0; }
 .motion__bg img {
   width: 100%; height: 100%;
@@ -772,7 +773,7 @@ body.is-revealed .hero__line > span { transform: none; }
 }
 .founder__media {
   position: relative;
-  border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%;
+  border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 44px 90px -45px rgba(61, 75, 65, 0.55);
 }
@@ -899,7 +900,7 @@ body.is-revealed .hero__line > span { transform: none; }
   z-index: 30;
   width: 270px;
   aspect-ratio: 3 / 4;
-  border-radius: 18px;
+  border-radius: 6px;
   overflow: hidden;
   pointer-events: none;
   opacity: 0;
@@ -980,7 +981,7 @@ body.is-revealed .hero__line > span { transform: none; }
   position: relative;
   background: #fff;
   border: 1px solid rgba(35, 35, 35, 0.07);
-  border-radius: 22px;
+  border-radius: 6px;
   padding: 30px 26px 28px;
   overflow: hidden;
   transition: transform 0.6s var(--ease-flow), box-shadow 0.6s;
@@ -996,7 +997,7 @@ body.is-revealed .hero__line > span { transform: none; }
   transition: transform 0.6s var(--ease-flow);
 }
 .pillar:hover {
-  transform: translateY(-10px) rotate(-0.6deg);
+  transform: translateY(-8px);
   box-shadow: 0 34px 60px -34px rgba(164, 111, 77, 0.55);
 }
 .pillar:hover::before { transform: scaleX(1); }
@@ -1014,7 +1015,7 @@ body.is-revealed .hero__line > span { transform: none; }
 .position__edge {
   margin-top: clamp(60px, 9vh, 100px);
   background: linear-gradient(120deg, var(--terracotta), var(--copper));
-  border-radius: 26px;
+  border-radius: 6px;
   padding: clamp(36px, 5.5vw, 70px);
   text-align: center;
   box-shadow: 0 40px 80px -45px rgba(164, 111, 77, 0.8);
