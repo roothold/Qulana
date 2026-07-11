@@ -88,6 +88,24 @@ em { font-style: italic; }
 }
 .btn--light:hover { background: var(--terracotta); color: var(--flow-white); }
 
+.link-quiet {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 4px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--midnight);
+  border-bottom: 1.5px solid rgba(35, 35, 35, 0.35);
+  transition: color 0.35s, border-color 0.35s, letter-spacing 0.5s var(--ease-flow);
+}
+.link-quiet:hover {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+  letter-spacing: 0.22em;
+}
+
 /* Scroll reveals */
 .reveal {
   opacity: 0;
@@ -798,22 +816,22 @@ body.is-revealed .hero__line > span { transform: none; }
 }
 .belief__title em { color: var(--terracotta); }
 .belief__hows {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   margin-top: clamp(28px, 4vh, 44px);
-}
-.belief__hows span {
-  font-size: 13.5px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: 1.5px solid rgba(164, 111, 77, 0.35);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 380;
+  font-size: clamp(17px, 1.7vw, 22px);
+  line-height: 2;
   color: var(--terracotta);
-  transition: background 0.35s, color 0.35s, transform 0.5s var(--ease-flow);
+  max-width: 44ch;
 }
-.belief__hows span:hover { background: var(--terracotta); color: var(--flow-white); transform: translateY(-3px); }
+.belief__hows i {
+  font-style: normal;
+  color: var(--copper);
+  font-size: 0.6em;
+  margin: 0 14px;
+  vertical-align: 2px;
+}
 .belief__closer {
   margin-top: clamp(26px, 4vh, 40px);
   font-family: var(--serif);
