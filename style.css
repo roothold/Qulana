@@ -53,8 +53,7 @@ em { font-style: italic; }
   margin-bottom: 28px;
 }
 .section-eyebrow.light { color: var(--sand); }
-.manifesto .section-eyebrow.light,
-.partners .section-eyebrow.light { color: var(--terracotta); }
+.manifesto .section-eyebrow.light { color: var(--terracotta); }
 
 .btn {
   display: inline-flex;
@@ -911,59 +910,6 @@ body.is-revealed .hero__line > span { transform: none; }
 }
 .position__edge strong { font-weight: 600; color: var(--terracotta); }
 
-/* ─────────── Partners ─────────── */
-
-.partners {
-  background: linear-gradient(200deg, #D9C5A7 0%, var(--sand) 50%, #BEA37F 100%);
-  color: var(--midnight);
-  padding: clamp(100px, 14vh, 180px) clamp(20px, 4.5vw, 64px);
-}
-.partners__inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(40px, 6vw, 100px);
-  align-items: center;
-}
-.partners__text h2 {
-  font-family: var(--serif);
-  font-weight: 350;
-  font-size: clamp(36px, 4.8vw, 66px);
-  line-height: 1.08;
-  letter-spacing: -0.015em;
-}
-.partners__text h2 em { color: var(--terracotta); }
-.partners__lead {
-  margin-top: 24px;
-  color: rgba(35, 35, 35, 0.75);
-  font-size: clamp(15.5px, 1.35vw, 17.5px);
-  max-width: 54ch;
-}
-.partners__roles { list-style: none; margin: clamp(30px, 5vh, 46px) 0; }
-.partners__roles li {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 18px;
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(35, 35, 35, 0.18);
-  font-size: 14.5px;
-}
-.partners__roles li:first-child { border-top: 1px solid rgba(35, 35, 35, 0.18); }
-.partners__roles strong { color: var(--terracotta); font-weight: 700; }
-.partners__roles span { color: rgba(35, 35, 35, 0.65); }
-.partners__media { position: relative; border-radius: 26px; overflow: hidden; }
-.partners__media img { width: 100%; object-fit: cover; aspect-ratio: 3 / 4; }
-.partners__media figcaption {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  padding: 60px 26px 22px;
-  background: linear-gradient(transparent, rgba(35, 35, 35, 0.75));
-  font-size: 13.5px;
-  color: rgba(248, 246, 241, 0.85);
-  letter-spacing: 0.04em;
-}
-
 /* ─────────── Waitlist ─────────── */
 
 .waitlist {
@@ -1099,10 +1045,8 @@ body.is-revealed .hero__line > span { transform: none; }
   .definition__grid { grid-template-columns: 1fr; }
   .belief { grid-template-columns: 1fr; }
   .belief__media { max-width: 480px; }
-  .partners__inner { grid-template-columns: 1fr; }
   .founder__inner { grid-template-columns: 1fr; }
   .founder__media { max-width: 460px; }
-  .partners__media { max-width: 520px; }
   .position__pillars { grid-template-columns: repeat(2, 1fr); }
   .framework__preview { display: none; }
 }
@@ -1119,7 +1063,6 @@ body.is-revealed .hero__line > span { transform: none; }
   .nav__burger { display: flex; }
   .flowrow { grid-template-columns: 44px 1fr; }
   .flowrow__desc { grid-column: 2; text-align: left; }
-  .partners__roles li { grid-template-columns: 1fr; gap: 6px; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .flowthread { display: none; }
 }
