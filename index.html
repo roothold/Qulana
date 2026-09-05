@@ -15,6 +15,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .contact{background:#F6F1E9;padding:clamp(72px,10vw,120px) 24px;}
+  .contact__inner{max-width:720px;margin:0 auto;text-align:center;}
+  .contact__title{font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:clamp(2.4rem,6vw,4rem);line-height:1.02;color:#232323;margin:.35em 0 .35em;}
+  .contact__title em{font-style:italic;color:#B98955;}
+  .contact__title .mline{display:block;}
+  .contact__sub{font-family:'Poppins',system-ui,sans-serif;color:#6E685C;max-width:48ch;margin:0 auto 2.4rem;line-height:1.65;}
+  .contact__form{display:flex;flex-direction:column;gap:16px;max-width:560px;margin:0 auto;text-align:left;}
+  .contact__row{display:flex;gap:16px;}
+  .contact__row .contact__field{flex:1;}
+  .contact__field{position:relative;}
+  .contact__field input,.contact__field textarea{width:100%;box-sizing:border-box;background:#fff;border:1px solid #E3DACB;border-radius:14px;padding:22px 16px 8px;font-family:'Poppins',system-ui,sans-serif;font-size:1rem;color:#232323;outline:none;resize:vertical;transition:border-color .2s;}
+  .contact__field textarea{min-height:130px;}
+  .contact__field input:focus,.contact__field textarea:focus{border-color:#B98955;}
+  .contact__field label{position:absolute;left:16px;top:17px;font-family:'Poppins',system-ui,sans-serif;font-size:1rem;color:#9A9280;pointer-events:none;transition:.16s ease;}
+  .contact__field input:focus+label,.contact__field input:not(:placeholder-shown)+label,.contact__field textarea:focus+label,.contact__field textarea:not(:placeholder-shown)+label{top:8px;font-size:.66rem;letter-spacing:.05em;color:#B98955;text-transform:uppercase;}
+  .contact__honey{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;}
+  .contact__form .btn{align-self:center;margin-top:6px;}
+  .contact__done{font-family:'Poppins',system-ui,sans-serif;text-align:center;color:#B98955;margin-top:20px;font-size:1.05rem;}
+  @media(max-width:560px){.contact__row{flex-direction:column;gap:16px;}}
+</style>
 </head>
 <body class="has-banner">
 
@@ -53,7 +74,7 @@
     <a href="#framework">The Framework</a>
     <a href="#founder">Founder</a>
   </nav>
-  <a href="mailto:contact@qulanabeauty.com" class="nav__cta">Contact us</a>
+  <a href="#contact" class="nav__cta">Contact us</a>
   <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span>
   </button>
@@ -65,7 +86,7 @@
     <a href="#philosophy">Philosophy</a>
     <a href="#framework">The Framework</a>
     <a href="#founder">Founder</a>
-    <a href="mailto:contact@qulanabeauty.com" class="mobilemenu__cta">Contact us</a>
+    <a href="#contact" class="mobilemenu__cta">Contact us</a>
   </nav>
 </div>
 
@@ -267,6 +288,39 @@
   </div>
 </section>
 
+<!-- ══════════ CONTACT ══════════ -->
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <p class="section-eyebrow reveal">Say hello</p>
+    <h2 class="contact__title">
+      <span class="mline">Let\'s</span>
+      <span class="mline"><em>connect.</em></span>
+    </h2>
+    <p class="contact__sub reveal">For partnerships, press and enquiries, send a note and we will be in touch.</p>
+    <form class="contact__form reveal" id="contactform" method="POST" action="https://formsubmit.co/ajax/lana@rootholdinc.com">
+      <input type="hidden" name="_subject" value="New enquiry from the Qulana site">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="contact__honey">
+      <div class="contact__row">
+        <div class="contact__field">
+          <input type="text" name="name" id="c_name" required placeholder=" " autocomplete="name">
+          <label for="c_name">Your name</label>
+        </div>
+        <div class="contact__field">
+          <input type="email" name="email" id="c_email" required placeholder=" " autocomplete="email">
+          <label for="c_email">Email address</label>
+        </div>
+      </div>
+      <div class="contact__field">
+        <textarea name="message" id="c_message" required placeholder=" " rows="4"></textarea>
+        <label for="c_message">Your message</label>
+      </div>
+      <button type="submit" class="btn btn--solid">Send message</button>
+    </form>
+    <p class="contact__done" id="contactdone" hidden>Thank you. Your message is on its way. ✦</p>
+  </div>
+</section>
+
 <!-- ══════════ WAITLIST ══════════ -->
 <section class="waitlist" id="waitlist">
   <div class="waitlist__inner">
@@ -276,7 +330,10 @@
       <span class="mline dark"><em>flow</em> first.</span>
     </h2>
     <p class="waitlist__sub reveal">Join the list for first access to the first collection, founding-member pricing and the story as it unfolds. No noise. Only flow.</p>
-    <form class="waitlist__form reveal" id="waitform" method="POST" action="https://formspree.io/f/FORMSPREE_ID">
+    <form class="waitlist__form reveal" id="waitform" method="POST" action="https://formsubmit.co/ajax/lana@rootholdinc.com">
+      <input type="hidden" name="_subject" value="New Qulana waitlist signup">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="contact__honey">
       <div class="waitlist__field">
         <input type="email" name="email" id="email" required placeholder=" " autocomplete="email">
         <label for="email">Your email address</label>
@@ -310,7 +367,7 @@
       </div>
     <div class="footer__col">
       <h4>Connect</h4>
-      <a href="mailto:contact@qulanabeauty.com">Contact</a>
+      <a href="#contact">Contact</a>
       <a href="#waitlist">Waitlist</a>
     </div>
     <div class="footer__col">
@@ -336,5 +393,24 @@
 
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 <script src="main.js"></script>
+<script>
+(function(){
+  function wire(form, done){
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button[type=submit]');
+      var label = btn ? btn.textContent : '';
+      if(btn){btn.disabled=true;btn.textContent='Sending\u2026';}
+      fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+        .then(function(r){return r.json();})
+        .then(function(){ form.style.display='none'; if(done){done.hidden=false;} })
+        .catch(function(){ if(btn){btn.disabled=false;btn.textContent=label;} alert('Something went wrong. Please try again.'); });
+    });
+  }
+  wire(document.getElementById('contactform'), document.getElementById('contactdone'));
+  wire(document.getElementById('waitform'), document.getElementById('waitdone'));
+})();
+</script>
 </body>
 </html>
